@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+{% block title %}Add Item{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-light">Add New Item</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.name.label(class="text-light") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.price.label(class="text-light") }}
+            {{ form.price(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.barcode.label(class="text-light") }}
+            {{ form.barcode(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.description.label(class="text-light") }}
+            {{ form.description(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-success") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
